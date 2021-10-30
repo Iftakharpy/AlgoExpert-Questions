@@ -1,2 +1,2 @@
 # AlgoExpert-Questions
-Solving AlgoExpert interview questions
+Solving AlgoExpert Coding Interview Questions

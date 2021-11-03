@@ -1,4 +1,4 @@
-from Non-Constructible_Change import nonConstructibleChange
+from Non_Constructible_Change import nonConstructibleChange
 
 def test_nonConstructibleChange_case_1():
     assert nonConstructibleChange(coins=[5, 7, 1, 1, 2, 3, 22]) == 20

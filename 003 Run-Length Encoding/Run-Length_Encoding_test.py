@@ -1,4 +1,4 @@
-from Run-Length_Encoding import runLengthEncoding
+from Run_Length_Encoding import runLengthEncoding
 
 def test_runLengthEncoding_case_1():
     assert runLengthEncoding(string='AAAAAAAAAAAAABBCCCCDD') == '9A4A2B4C2D'

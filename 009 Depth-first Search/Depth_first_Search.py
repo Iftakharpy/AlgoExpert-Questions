@@ -12,4 +12,7 @@ class Node:
         return self
 
     def depthFirstSearch(self, array):
-        pass
+        array.append(self.name)
+        for node in self.children:
+            node.depthFirstSearch(array)
+        return array

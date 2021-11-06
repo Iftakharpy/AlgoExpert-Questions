@@ -27,3 +27,6 @@ def test_isPalindrome_case_8():
 def test_isPalindrome_case_9():
     assert isPalindrome(string='abcdefghihgfeddcba') == False
 
+def test_isPalindrome_case_10():
+    assert isPalindrome(string='fail') == True
+

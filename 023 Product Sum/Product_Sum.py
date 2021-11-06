@@ -1,4 +1,5 @@
-# time O(n) - n is number of numbers in array including nested arrays
+# time O(n) - n is the number of elements in array and their sub arrays.
+# 			  Ex: [1, 2, [[[3]], [4]]] - O(8)
 # space O(d) - d is max depth of arrays (call stack size)
 def productSum(array, depth=1):
     sum = 0

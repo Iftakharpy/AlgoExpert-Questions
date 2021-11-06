@@ -1,4 +1,4 @@
-name: Python Package using Conda
+name: Run pytest with Python3.9
 
 on: [push]
 

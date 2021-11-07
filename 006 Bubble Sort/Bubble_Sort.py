@@ -1,4 +1,4 @@
-# time O(n^2)
+# time Best - O(n), Average - O(n^2), Worst - O(n^2)
 # space O(1)
 def bubbleSort(array):
     for i in range(len(array)-1, 0, -1):

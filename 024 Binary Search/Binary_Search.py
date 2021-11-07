@@ -17,7 +17,7 @@ def binarySearch(array, target):
 
 # Good
 # time O(log(n)) - n is len(array)
-# space O(n) - here n is max call stack size
+# space O(log(n)) - here n is max call stack size
 def binarySearchHelper(array, target, low, high):
     mid = (low+high)//2
     # Base cases

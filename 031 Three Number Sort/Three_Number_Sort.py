@@ -39,3 +39,28 @@ def threeNumberSort(array, order):
 			swap(array, second_idx, third_idx)
 			third_idx -= 1
 	return array
+
+
+# time O(n)
+# space O(1)
+def threeNumberSort(array, order):
+	first = order[0]
+	third = order[-1]
+	first_idx = 0
+	third_idx = len(array) - 1
+	
+	idx = 0
+	while idx<=third_idx:
+		if first == array[idx]:
+			swap(array, first_idx, idx)
+			first_idx += 1
+			idx += 1
+		elif third == array[idx]:
+			swap(array, third_idx, idx)
+			third_idx -= 1
+			# Here not increasing the idx.
+			# Because the number swapped from the third_idx isn't necessarily in the correct place yet.
+		else:
+			# It's the second number so it's in the correct place
+			idx+=1
+	return array

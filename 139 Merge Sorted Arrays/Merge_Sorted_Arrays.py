@@ -48,7 +48,7 @@ def mergeTwoSortedArrays(array_one, array_two):
 ##############################################################################################################
 # Solution 2
 
-from .minHeap import MinHeap
+from minHeap import MinHeap
 
 
 # O(nlog(k) + k) time | O(n + k) space - where n is the total

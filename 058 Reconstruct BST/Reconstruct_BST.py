@@ -12,6 +12,30 @@ class BST:
         return str(self) == str(__o)
 
 
+############################################################################
+# Solution 1
+
+# time O(n^2) | space O(n+d) - n nodes and d call stack size
+# n is len(preOrderTraversalValues)
+# d is max depth of bst
 def reconstructBst(preOrderTraversalValues):
-    # Write your code here.
-    return None
+    if len(preOrderTraversalValues)==0:
+        return None
+    bst = BST(preOrderTraversalValues[0])
+    for i in range(1, len(preOrderTraversalValues)):
+        insertIntoBST(bst, BST(preOrderTraversalValues[i]))
+    return bst
+
+# time O(n) | space O(n) - call stack space
+# where n is the height of the BST
+def insertIntoBST(bst, node):
+    if node.value<bst.value:
+        if bst.left is not None:
+            insertIntoBST(bst.left, node)
+        else:
+            bst.left = node
+    else:
+        if bst.right is not None:
+            insertIntoBST(bst.right, node)
+        else:
+            bst.right = node

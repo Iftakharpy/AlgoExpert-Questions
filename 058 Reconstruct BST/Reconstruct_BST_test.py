@@ -16,6 +16,7 @@ def buildTree(tree):
     nodes = tree['nodes']
     head = tree['root']
     return findNode(nodes, head)
+
 def test_reconstructBst_case_1():
     tree={'nodes': [{'id': '10', 'left': '4', 'right': '17', 'value': 10}, {'id': '17', 'left': None, 'right': '19', 'value': 17}, {'id': '19', 'left': '18', 'right': None, 'value': 19}, {'id': '18', 'left': None, 'right': None, 'value': 18}, {'id': '4', 'left': '2', 'right': '5', 'value': 4}, {'id': '5', 'left': None, 'right': None, 'value': 5}, {'id': '2', 'left': '1', 'right': None, 'value': 2}, {'id': '1', 'left': None, 'right': None, 'value': 1}], 'root': '10'}
     tree=buildTree(tree)

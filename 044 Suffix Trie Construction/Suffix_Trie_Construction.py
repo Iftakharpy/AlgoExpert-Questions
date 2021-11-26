@@ -8,10 +8,26 @@ class SuffixTrie:
         self.endSymbol = "*"
         self.populateSuffixTrieFrom(string)
 
-    def populateSuffixTrieFrom(self, string):
-        # Write your code here.
-        pass
+    # time O(n) | space O(n) - n is len(string) - start_index
+    def insertSuffixStartingAtIndex(self, start_index, string):
+        trie = self.root
+        for idx in range(start_index, len(string)):
+            ch = string[idx]
+            if ch not in trie:
+                trie[ch] = {}
+            trie = trie[ch]
+        trie[self.endSymbol] = True
 
+    # time O(n^2) | space O(n^2) - n is len(string)
+    def populateSuffixTrieFrom(self, string):
+        for idx in range(len(string)):
+            self.insertSuffixStartingAtIndex(idx, string)
+
+    # time (m) | space O(1) - m is len(string)
     def contains(self, string):
-        # Write your code here.
-        pass
+        trie = self.root
+        for ch in string:
+            if ch not in trie:
+                return False
+            trie = trie[ch]
+        return self.endSymbol in trie
